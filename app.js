@@ -1,8 +1,9 @@
+process.env.PWD = process.cwd();
 var express = require('express');
 var app = express();
 var port;
 
-app.use(express.static('public'));
+app.use(express.static(process.env.PWD + '/public'));
 
 app.get('/', function(req, res) {
   res.send('OK');

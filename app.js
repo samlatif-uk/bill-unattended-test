@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
   res.send('OK');
 })
 
-port = process.env.NODE_ENV || 3000;
+port = process.env.PORT || 3000;
 
 app.listen(port, function() {
   console.log("Listening on", port);

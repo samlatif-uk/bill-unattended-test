@@ -4,6 +4,10 @@ var port;
 
 app.use(express.static('public'));
 
+app.get('/', function(req, res) {
+  res.send('OK');
+})
+
 port = process.env.NODE_ENV || 3000;
 
 app.listen(port, function() {

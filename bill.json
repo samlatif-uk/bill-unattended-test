@@ -55,7 +55,7 @@
     ],
     "buyAndKeep": [
       { "title": "That's what she said", "cost": 9.99 },
-      { "title": "Broke back mountain", "cost": 9.99 }
+      { "title": "Brokeback mountain", "cost": 9.99 }
     ],
     "total": 24.97
   }

@@ -9,7 +9,7 @@ To display a customer's bill
 * Complete the task in a language of your choice using whatever tools or frameworks that you want.
 * Must consume bill JSON from endpoint: 
 ```
-http://safe-plains-5453.herokuapp.com/bill.json
+https://still-scrubland-9880.herokuapp.com/bill.json
 ```
 * Provide a README on how to run your app or, if you deploy it online, a URL to your app. 
 

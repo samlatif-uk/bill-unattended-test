@@ -1,6 +1,6 @@
 # Bill unattended test
 
-You shouldn't spend any more than 2 hours on this task
+You should try not to spend any more than 2 hours on this task
 
 ## Task
 

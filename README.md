@@ -1,7 +1,5 @@
 # Bill unattended test
 
-You should try not to spend any more than 2 hours on this task
-
 ## Task
 
 To display a customer's bill

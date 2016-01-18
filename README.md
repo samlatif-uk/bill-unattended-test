@@ -6,6 +6,7 @@ To display a customer's bill
 
 ## Requirements
 
+* Complete the task in a language of your choice using whatever tools or frameworks that you want.
 * Must consume bill JSON from endpoint: 
 ```
 https://still-scrubland-9880.herokuapp.com/bill.json

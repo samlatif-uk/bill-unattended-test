@@ -6,7 +6,6 @@ To display a customer's bill
 
 ## Requirements
 
-* Complete the JavaScript using React and Webpack.
 * Must consume bill JSON from endpoint: 
 ```
 https://still-scrubland-9880.herokuapp.com/bill.json
@@ -15,7 +14,7 @@ https://still-scrubland-9880.herokuapp.com/bill.json
 
 ## What we're looking for
 
-* Tests in a TDD/BDD style using Mocha/Jasmine and/or Nightwatch
+* Tests in a TDD/BDD style
 * Bill should be easy to understand
 * Good user experience
 * Simple and eloquent code

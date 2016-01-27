@@ -11,11 +11,16 @@ To display a customer's bill
 ```
 https://still-scrubland-9880.herokuapp.com/bill.json
 ```
-* Provide a README on how to run your app or, if you deploy it online, a URL to your app. 
+* Provide a README on how to run your app and, if you deploy it online, a URL to your app. 
 
 ## What we're looking for
 
-* TDD/BDD
+* Tests in a TDD/BDD style
+* Bill should be easy to understand
+* Good user experience
 * Simple and eloquent code
-* Knowledge of front end development
-* Bill should be easy to understand (good user experience)
+* Knowledge of:
+  * Responsive design
+  * Accessibility
+  * Event Handling
+* Be creative!

@@ -1,24 +1,14 @@
-# Made using a modified React Redux minimal starter kit (boilerplate)
+# QUICK START
+
+1. Clone the repo
+2. Assuming you have Node/NPM already installed, navigate to the project root and start with `npm i` to install dependencies
+3. Next, type `npm start` to spin up a local webpack dev server at `http://localhost:3000`
+4. Run `npm test` to spin up the Mocha unit tests
+5. ...this is WIP - will have it looking pretty soon!
+
+# Made using React Redux minimal starter kit (boilerplate)
 
 <br><a href="http://redux-minimal.js.org/"><img src="http://redux-minimal.js.org/logo/redux-minimal-logo-blue.svg"></a><br><br>
-
-# Getting started
-
-1.
-2. Once your environment is prepared, open a command prompt (terminal) and type in the following:
-
-    ```sh
-    cd C:\js\node\apps
-    git clone https://github.com/catalin-luntraru/redux-minimal.git hello-world
-    cd hello-world
-    npm install
-    npm start
-    ```
-
-3. Then open your [http://localhost:8080/](http://localhost:8080/) to see the included small users app. 
-Congratulations! You can now write react redux code.
-
-4. For more productivity you can install Chrome's [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
 # Why use this?
 

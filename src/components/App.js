@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { ProgressBar } from "react-bootstrap";
 import "../stylesheets/main.scss";
-
+import {Header} from './stateless/Header'
 export class App extends Component {
 
   componentWillMount() {
@@ -16,6 +16,7 @@ export class App extends Component {
     return !bill
         ? <ProgressBar active now={100}/>
         : <div className="container">
+          <Header/>
             <div>
                 {children}
             </div>
@@ -26,7 +27,7 @@ export class App extends Component {
 // export the connected class
 function mapStateToProps(state) {
     return {
-        bill: state.bill || [],
+        bill: state.billReducer,
     };
 }
 export default connect(mapStateToProps)(App);

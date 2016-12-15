@@ -1,13 +1,13 @@
 import React from "react";
 import { shallow } from "enzyme";
 import assert from "assert";
-import Home from "../../src/components/Bill";
+import Bill from "../../src/components/Bill";
 
 // unit tests for the Home component
-describe('Home component', () => {
+describe('Bill component', () => {
   describe('render()', () => {
     it('should render the component', () => {
-      const wrapper = shallow(<Home/>);
+      const wrapper = shallow(<Bill/>);
       assert.equal(wrapper.length, 1);
     });
   });

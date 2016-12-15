@@ -4,10 +4,7 @@
   "description": "Task: To display a customer's bill - render JSON data using React",
   "keywords": [
     "react",
-    "redux",
-    "minimal",
-    "starter kit",
-    "boilerplate"
+    "redux"
   ],
   "main": "index.js",
   "scripts": {

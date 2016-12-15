@@ -53,17 +53,65 @@ class Bill extends React.Component {
               </div>
           </Panel>
           <Panel header="Your Packages" eventKey="2">
-              <div className="bill__packages">
-              {
-                  JSON.stringify(bill.package)
-              }
+              <Table className="bill__packages" responsive>
+                  <thead>
+                  <tr>
+                      <th>Type</th>
+                      <th>Name</th>
+                      <th>Cost</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {bill.package.subscriptions.map((item, index) =>
+                      <tr key={index}>
+                          <td>{item.type}</td>
+                          <td>{item.name}</td>
+                          <td>{item.cost}</td>
+                      </tr>
+                  )}
+                  </tbody>
+              </Table>
+              <div className="panel-footer">
+                  {`Total: ${bill.package.total}`}
               </div>
           </Panel>
           <Panel header="Sky Store" eventKey="3">
-              <div className="bill__sky-store">
-              {
-                  JSON.stringify(bill.skyStore)
-              }
+              <h3>Your Rentals</h3>
+              <Table className="bill__sky-store-rentals" responsive>
+                  <thead>
+                  <tr>
+                      <th>Title</th>
+                      <th>Cost</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {bill.skyStore.rentals.map((item, index) =>
+                      <tr key={index}>
+                          <td>{item.title}</td>
+                          <td>{item.cost}</td>
+                      </tr>
+                  )}
+                  </tbody>
+              </Table>
+              <h3>Buy and Keep</h3>
+              <Table className="bill__sky-store-keep" responsive>
+                  <thead>
+                  <tr>
+                      <th>Title</th>
+                      <th>Cost</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {bill.skyStore.buyAndKeep.map((item, index) =>
+                      <tr key={index}>
+                          <td>{item.title}</td>
+                          <td>{item.cost}</td>
+                      </tr>
+                  )}
+                  </tbody>
+              </Table>
+              <div className="panel-footer">
+                  {`Total: ${bill.skyStore.total}`}
               </div>
           </Panel>
         </PanelGroup>

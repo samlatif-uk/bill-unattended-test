@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { PanelGroup, Panel, Table } from "react-bootstrap";
 
-class Bill extends React.Component {
+export class Bill extends React.Component {
 
   constructor(props) {
     super(props);

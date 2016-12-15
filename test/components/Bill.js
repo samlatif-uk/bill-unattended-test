@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
 import assert from "assert";
-import Bill from "../../src/components/Bill";
+import {Bill} from "../../src/components/Bill";
 
-const billJSON = require('../../bill.json');
+const BILL = require('../../bill.json');
 
 // unit tests for the Bill component
 describe('Bill component', () => {
   describe('render()', () => {
     it('should render the component', () => {
-      const props = {dispatch: ()=>{}, bill: billJSON};
+      const props = {dispatch: ()=>{}, bill: BILL};
       const wrapper = shallow(<Bill {...props}/>);
       assert.equal(wrapper.length, 1);
     });

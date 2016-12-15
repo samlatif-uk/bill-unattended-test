@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { ProgressBar } from "react-bootstrap";
 import "../stylesheets/main.scss";
 import {Header} from './stateless/Header'
+
 export class App extends Component {
 
   componentWillMount() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { PanelGroup, Panel } from "react-bootstrap";
+import { PanelGroup, Panel, Table } from "react-bootstrap";
 
 class Bill extends React.Component {
 
@@ -30,10 +30,26 @@ class Bill extends React.Component {
         </div>
         <PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
           <Panel header="Call Charges" eventKey="1">
-              <div className="bill__call-charges">
-                  {
-                      JSON.stringify(bill.callCharges)
-                  }
+              <Table className="bill__call-charges" responsive>
+                  <thead>
+                    <tr>
+                      <th>Called</th>
+                      <th>Duration</th>
+                      <th>Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {bill.callCharges.calls.map((item, index) =>
+                     <tr key={index}>
+                      <td>{item.called}</td>
+                      <td>{item.duration}</td>
+                      <td>{item.cost}</td>
+                     </tr>
+                  )}
+                </tbody>
+              </Table>
+              <div className="panel-footer">
+                  {`Total: ${bill.callCharges.total}`}
               </div>
           </Panel>
           <Panel header="Your Packages" eventKey="2">

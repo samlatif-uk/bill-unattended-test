@@ -13,7 +13,7 @@ export const SkyStoreTable = (props) =>
     {props.items.map((item, index) =>
         <tr key={index}>
           <td>{item.title}</td>
-          <td>{item.cost}</td>
+          <td>£{item.cost}</td>
         </tr>
     )}
   </tbody>

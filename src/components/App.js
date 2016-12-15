@@ -16,12 +16,10 @@ export class App extends Component {
     const {bill, children} = this.props;
     return !bill
         ? <ProgressBar active now={100}/>
-        : <div className="container">
-          <Header/>
-            <div>
-                {children}
-            </div>
-          </div>
+        : <main className="container-fluid">
+            <Header/>
+            {children}
+          </main>
   }
 }
 

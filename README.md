@@ -4,7 +4,7 @@
 2. Assuming you have Node/NPM already installed, navigate to the project root and start with `npm i` to install dependencies
 3. Next, type `npm start` to spin up a local webpack dev server at `http://localhost:3000`
 4. Run `npm test` to spin up the Mocha unit tests
-5. ...this is WIP - will have it looking pretty soon, and with minimal dependencies
+5. Still WIP - Styling and Responsive/UX considerations
 
 # Scripts
 
@@ -18,27 +18,6 @@ Besides the `start` script, there are also other scripts
 
 
 # Made using React Redux minimal starter kit (boilerplate)
-
-<br><a href="http://redux-minimal.js.org/"><img src="http://redux-minimal.js.org/logo/redux-minimal-logo-blue.svg"></a><br><br>
-
-# Why use this?
-
-Redux-Minimal contains the minimum npm packages you need to have installed in order to build a react redux real-world app containing:
-* a proper file/folder structure
-* pages (routes)
-* forms with validation
-* real-world API asynchronous requests
-* unit tests
-* bootstrap react components
-* sass
-* hot loader for ease of development
-* redux tools
-* js and css bundle files built for development or production
-
-The code and implementation are minimal, which lets you focus on the real app, not the webpack, babel, gulp etc boilerplate files, which honestly you shouldn't even bother with.
-
-# Installed packages
-
 Here are the npm packages that redux-minimal installs:
 
 |Feature|Packages|Benefits|

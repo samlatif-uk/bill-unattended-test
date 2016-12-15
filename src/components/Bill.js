@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { PanelGroup, Panel, Table } from "react-bootstrap";
+import { SkyStoreTable } from './stateless/SkyStoreTable';
 
 export class Bill extends React.Component {
 
@@ -25,8 +26,8 @@ export class Bill extends React.Component {
           <h1>Statement overview</h1>
           <h2>Showing your bill for the following period:</h2>
           <p>{`From ${bill.statement.period.from} to ${bill.statement.period.to}`}</p>
-          <p>{`Total cost for this period: ${bill.total}`}</p>
-          <p>{`Payment due: ${bill.statement.due}`}</p>
+          <p>{`Total cost for this period: £${bill.total}`}</p>
+          <p>{`Payment due on: ${bill.statement.due}`}</p>
         </div>
         <PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
           <Panel header="Call Charges" eventKey="1">
@@ -72,46 +73,16 @@ export class Bill extends React.Component {
                   </tbody>
               </Table>
               <div className="panel-footer">
-                  {`Total: ${bill.package.total}`}
+                  {`Total: £${bill.package.total}`}
               </div>
           </Panel>
           <Panel header="Sky Store" eventKey="3">
               <h3>Your Rentals</h3>
-              <Table className="bill__sky-store-rentals" responsive>
-                  <thead>
-                  <tr>
-                      <th>Title</th>
-                      <th>Cost</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  {bill.skyStore.rentals.map((item, index) =>
-                      <tr key={index}>
-                          <td>{item.title}</td>
-                          <td>{item.cost}</td>
-                      </tr>
-                  )}
-                  </tbody>
-              </Table>
+              <SkyStoreTable items={bill.skyStore.rentals}/>
               <h3>Buy and Keep</h3>
-              <Table className="bill__sky-store-keep" responsive>
-                  <thead>
-                  <tr>
-                      <th>Title</th>
-                      <th>Cost</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  {bill.skyStore.buyAndKeep.map((item, index) =>
-                      <tr key={index}>
-                          <td>{item.title}</td>
-                          <td>{item.cost}</td>
-                      </tr>
-                  )}
-                  </tbody>
-              </Table>
+              <SkyStoreTable items={bill.skyStore.buyAndKeep}/>
               <div className="panel-footer">
-                  {`Total: ${bill.skyStore.total}`}
+                  {`Total: £${bill.skyStore.total}`}
               </div>
           </Panel>
         </PanelGroup>

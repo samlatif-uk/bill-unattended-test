@@ -4,7 +4,20 @@
 2. Assuming you have Node/NPM already installed, navigate to the project root and start with `npm i` to install dependencies
 3. Next, type `npm start` to spin up a local webpack dev server at `http://localhost:3000`
 4. Run `npm test` to spin up the Mocha unit tests
-5. ...this is WIP - will have it looking pretty soon!
+5. ...this is WIP - will have it looking pretty soon, and with minimal dependencies
+
+# Scripts
+
+Besides the `start` script, there are also other scripts
+
+|`npm run <script>`|What it does|
+|------------------|------------|
+|`start`|Starts the app at [http://localhost:8080/](http://localhost:8080/). The bundle js/css files are stored in memory|
+|`test`|Starts the unit testing using all the files found in the `test` folder|
+|`test-watch`| Starts the unit testing and watches for changes to re-run the tests|
+|`build-dev`|Builds the js/css bundle files in the `public` folder. Adds debugging code for development|
+|`build-prod`|Builds the js/css bundle minified files in the `public` folder|
+
 
 # Made using React Redux minimal starter kit (boilerplate)
 
@@ -64,24 +77,8 @@ Here are the npm packages that redux-minimal installs:
 ||[`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/)|Helps the browser to understand the new js syntax|
 ||[`whatwg-fetch`](https://github.com/github/fetch)|Helps the browser to use fetch|
 
-# Scripts
-
-Besides the `start` script, there are also other scripts
-
-|`npm run <script>`|What it does|
-|------------------|------------|
-|`start`|Starts the app at [http://localhost:8080/](http://localhost:8080/). The bundle js/css files are stored in memory|
-|`test`|Starts the unit testing using all the files found in the `test` folder|
-|`test-watch`| Starts the unit testing and watches for changes to re-run the tests|
-|`build-dev`|Builds the js/css bundle files in the `public` folder. Adds debugging code for development|
-|`build-prod`|Builds the js/css bundle minified files in the `public` folder|
-
-
 # License
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 Everyone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.
-
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-  0. You just DO WHAT THE FUCK YOU WANT TO.

@@ -1,7 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
+import { PanelGroup, Panel } from "react-bootstrap";
 
 class Bill extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+        activeKey: 1
+    };
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  handleSelect(activeKey) {
+    this.setState({ activeKey });
+  }
+
 
   render() {
     const { bill } = this.props;
@@ -14,30 +28,30 @@ class Bill extends React.Component {
           <p>{`Total cost for this period: ${bill.total}`}</p>
           <p>{`Payment due: ${bill.statement.due}`}</p>
         </div>
-        <div className="bill__call-charges">
-          <h1>Call Charges</h1>
-          <ul>
-            {
-              JSON.stringify(bill.callCharges)
-            }
-          </ul>
-        </div>
-        <div className="bill__packages">
-          <h1>Packages</h1>
-          <ul>
-            {
-              JSON.stringify(bill.package)
-            }
-          </ul>
-        </div>
-        <div className="bill__sky-store">
-          <h1>Sky Store</h1>
-          <ul>
-            {
-              JSON.stringify(bill.skyStore)
-            }
-          </ul>
-        </div>
+        <PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
+          <Panel header="Call Charges" eventKey="1">
+              <div className="bill__call-charges">
+                  {
+                      JSON.stringify(bill.callCharges)
+                  }
+              </div>
+          </Panel>
+          <Panel header="Your Packages" eventKey="2">
+              <div className="bill__packages">
+              {
+                  JSON.stringify(bill.package)
+              }
+              </div>
+          </Panel>
+          <Panel header="Sky Store" eventKey="3">
+              <div className="bill__sky-store">
+              {
+                  JSON.stringify(bill.skyStore)
+              }
+              </div>
+          </Panel>
+        </PanelGroup>
+
       </div>
     );
   }

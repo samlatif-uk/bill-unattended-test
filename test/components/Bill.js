@@ -3,11 +3,14 @@ import { shallow } from "enzyme";
 import assert from "assert";
 import Bill from "../../src/components/Bill";
 
-// unit tests for the Home component
+const billJSON = require('../../bill.json');
+
+// unit tests for the Bill component
 describe('Bill component', () => {
   describe('render()', () => {
     it('should render the component', () => {
-      const wrapper = shallow(<Bill/>);
+      const props = {dispatch: ()=>{}, bill: billJSON};
+      const wrapper = shallow(<Bill {...props}/>);
       assert.equal(wrapper.length, 1);
     });
   });
